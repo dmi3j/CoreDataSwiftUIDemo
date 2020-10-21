@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
+        <attribute name="entityDescription" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="entityImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="entityTitle" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="entityType" optional="YES" attributeType="String"/>
+        <attribute name="entityValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="entityLabels" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EntityLabel" inverseName="labelEntity" inverseEntity="EntityLabel"/>
+    </entity>
+    <entity name="EntityLabel" representedClassName="EntityLabel" syncable="YES" codeGenerationType="class">
+        <attribute name="entityLabel" optional="YES" attributeType="String"/>
+        <relationship name="labelEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entity" inverseName="entityLabels" inverseEntity="Entity"/>
+    </entity>
+    <elements>
+        <element name="Entity" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="EntityLabel" positionX="120.91796875" positionY="25.4375" width="128" height="73"/>
+    </elements>
+</model>
